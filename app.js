@@ -8,9 +8,9 @@ const app = express();
 dotenv.config();
 app.use(express.json());
 
-connectDB();
+connectDB();  //Conntect the data base first.
 
-app.use("/", router);
+app.use("/", router); //Check for the route using userRouter.
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

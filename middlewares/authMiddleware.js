@@ -8,8 +8,10 @@ const authMiddleware = (req, res, next) => {
 
   jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
     if (err) return res.status(403).json({ error: "Invalid token" });
-    req.userId = decoded.id; // Save user ID for use in routes
-    next();
+    req.userId = decoded.id; // retrieves the user ID from the token payload and attach it to the req
+    //Also the next middleware or route handler can directly use "req.userId" without needing to decode the token again
+
+    next(); //Call the next function in "router"
   });
 };
 

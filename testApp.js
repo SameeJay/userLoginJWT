@@ -24,11 +24,11 @@ axios
     console.error("Error:", error.response?.data);
   });
 
-axios
-  .get("http://localhost:3000/users")
-  .then((response) => {
-    console.log(response?.data);
-  })
-  .catch((error) => {
-    console.error("Error:", error.response?.data);
-  });
+// axios
+//   .get("http://localhost:3000/users")
+//   .then((response) => {
+//     console.log(response?.data);
+//   })
+//   .catch((error) => {
+//     console.error("Error:", error.response?.data);
+//   });
